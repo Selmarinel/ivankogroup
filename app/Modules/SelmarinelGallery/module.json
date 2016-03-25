@@ -1,0 +1,9 @@
+{
+  	"order": 14,
+	"name": "SelmarinelGallery",
+	"slug": "selmarinel_gallery",
+	"namespace": "SelmarinelGallery",
+	"version": "1.0",
+	"description": "This is the description for the SelmarinelGallery module.",
+	"enabled": true
+}

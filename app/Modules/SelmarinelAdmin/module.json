@@ -1,0 +1,9 @@
+{
+  	"order": 7,
+	"name": "SelmarinelAdmin",
+	"slug": "selmarinel_admin",
+	"namespace": "SelmarinelAdmin",
+	"version": "1.0",
+	"description": "SelmarinelCore Admin Module",
+	"enabled": true
+}
