@@ -63,6 +63,13 @@
                     </div>
                 @endforeach
             </div>
+            <div id="content"></div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+            <script type="text/babel" src="{{$app['SelmarinelCore.assets']->getPath('js/lib/comments_loader.js')}}"></script>
+
             <form class="form-group popup text-left col-xs-12"
                   action="{{$getRoute('api:comments',['id'=>$model->id])}}">
                 <h5 class="custom_title" style="margin:5px -5px">Ваш комментарий</h5>
@@ -84,7 +91,6 @@
                 {{--<span class="btn btn-xs btn-more"><i class="fa fa-thumbs-up"></i> {{$model->likes}}</span>--}}
             </div>
             <div class="hidden">{{$model->id}}</div>
-        </div>
         @endforeach
     </div>
     <div class="text-center"> <?php echo $collection->render(); ?></div>

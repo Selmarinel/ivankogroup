@@ -23,6 +23,7 @@ Route::group(['prefix' => 'site'], function() {
 	$asPrefix = 'site';
 	Route::group(['prefix' => 'api'], function() use ($asPrefix) {
 		$asAction = ':api';
+		Route::get('/{id}/comments','APIController@getComments');
 		Route::post('/admin-send', ['as' => $asPrefix . $asAction . ':admin:send', 'uses' => 'APIController@adminSend']);
 		Route::get('/increment/{id}', ['as' => $asPrefix . $asAction . ':increment', 'uses' => 'APIController@increment']);
 		Route::any('/order', ['as' => $asPrefix . $asAction . ':order', 'uses' => 'APIController@sendOrder']);

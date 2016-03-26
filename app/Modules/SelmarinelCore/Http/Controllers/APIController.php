@@ -83,4 +83,15 @@ class APIController extends SiteController
         $service->getModel()->save();
         return $this->sendOk();
     }
+
+    public function getComments($id = null){
+        $service = new Comments();
+        return $service->getModel()
+            ->query()
+            ->where('project_id',$id)
+            ->get()
+            ->map(function($model){
+                return $model->getInfo();
+            });
+    }
 }

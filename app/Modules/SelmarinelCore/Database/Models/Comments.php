@@ -46,4 +46,14 @@ class Comments extends Base
     public function setAvatarAttribute($value){
         $this->attributes['avatar'] = ($value) ? $value : App::make('SelmarinelCore.assets')->getPath('images/user_blank.png');
     }
+
+    public function getInfo(){
+        return [
+            'id'        =>  $this->id,
+            'avatar'    =>  $this->getCover(),
+            'user'      =>  $this->user,
+            'text'      =>  $this->text,
+            'project_id'=>  $this->project_id
+        ];
+    }
 }

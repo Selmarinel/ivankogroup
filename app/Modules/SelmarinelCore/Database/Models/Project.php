@@ -69,5 +69,4 @@ class Project extends Base
             $this->attributes['cover_id'] = $value;
         }
     }
-
 }
