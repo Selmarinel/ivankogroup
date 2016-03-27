@@ -3,25 +3,23 @@
  */
 var CommentBox = React.createClass({
     handleCommentSubmit: function(comment) {
-        //$.ajax({
-        //    url: this.props.url,
-        //    dataType: 'json',
-        //    type: 'POST',
-        //    data: comment,
-        //    success: function(data) {
-        //        this.setState({data: data});
-        //    }.bind(this),
-        //    error: function(xhr, status, err) {
-        //        console.error(this.props.url, status, err.toString());
-        //    }.bind(this)
-        //});
         var id = 0;
         this.state.data.map(function(e){
             return id = e.id;
         });
-
-        //id++;
         comment.id = ++id;
+        //$.ajax({
+        //    url: "/01/api/core.php",
+        //    dataType: 'json',
+        //    type: 'POST',
+        //    data: comment,
+        //    //success: function(data) {
+        //    //    this.setState({data: data});
+        //    //}.bind(this),
+        //    //error: function(xhr, status, err) {
+        //    //    console.error(this.props.url, status, err.toString());
+        //    //}.bind(this)
+        //});
         this.state.data.push(comment);
     },
     getInitialState: function() {
