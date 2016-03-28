@@ -6,9 +6,6 @@ var SearchExample = React.createClass({
 
     handleChange: function(e){
 
-        // Если вы закомментируете данную строку, поле ввода не изменит свое значение.
-        // Это потому, что в React'е, поле не может измениться независимо от свойства
-        // которое было ему присвоено. В нашем случае, это this.state.searchString.
 
         this.setState({searchString:e.target.value});
     },
@@ -20,8 +17,6 @@ var SearchExample = React.createClass({
 
 
         if(searchString.length > 0){
-
-            // Ищем. Фильтрируем резальтаты.
 
             libraries = libraries.filter(function(l){
                 return l.name.toLowerCase().match( searchString );
